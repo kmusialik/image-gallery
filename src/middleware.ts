@@ -2,7 +2,7 @@ import { authMiddleware, redirectToSignIn } from '@clerk/nextjs';
 import { NextResponse } from 'next/server';
 
 export default authMiddleware({
-  publicRoutes: ['/', '/sign-up', '/sign-in', '/image/(.*)'],
+  publicRoutes: ['/', '/sign-up', '/sign-in', '/image/(.*)', '/api/images'],
 
   afterAuth(auth, req) {
     // Handle users who aren't authenticated
